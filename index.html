@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Invitation Page</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" src="js/invitation.js"></script>
+    <script type="text/javascript" src="js/volunteers.js"></script>
+    <script type="text/javascript" src="js/volunteersassess7.js"></script>
+</head>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#form').onsubmit = () => {
+        const recipientName = document.querySelector('#recipientName').value;
+
+   const organizationName = document.querySelector('#orgName').value;
+
+      const eventDate = document.querySelector('#date').value;
+
+        const url = document.querySelector('#url').value;
+
+         const hostName = document.querySelector('#hostName').value;
+             const labelRname = document.getElementById('recipientName').value;
+
+            document.getElementById('recipientNameLabel').textContent = labelRname;
+
+    const labelOrgName = document.getElementById('orgName').value;
+
+    document.getElementById('orgNameLabel').textContent = labelOrgName;
+
+   const labeleventDate = document.getElementById('date').value;
+
+  document.getElementById('eventDateLabel').textContent = labeleventDate;
+
+  const labelurl = document.getElementById('url').value;
+
+     document.getElementById('urlLabel').textContent = labelurl;
+
+        const labelhostName = document.getElementById('hostName').value;
+
+       document.getElementById('hostNameLabel').textContent = labelhostName;
+
+const invitation = `Hello ${recipientName} !\n\n You have been invited to volunteer for an event held by ${organizationName} on ${eventDate}. Please come to the following website: ${url} to sign up as a volunteer.\n\n Thanks!\n - ${hostName}`;
+alert(invitation);
+    return false;
+
+}
+
+})
+
+</script>
+
+<style>
+       body{background-color:skyblue;
+       }
+</style>
+
+<body>
+    <header>
+        <div class="top">
+            <a class="logo" href="index.html">CapellaVolunteers<span class="dotcom">.org</span></a>
+        </div>
+        <nav>
+            <ul class="topnav">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li><a href="invitation.html" class="active">Invitation</a>
+                </li>
+				<li><a href="volunteer.html">Volunteers</a>
+                </li>
+                <li><a href="gallery.html">Gallery</a>
+                </li>
+                <li><a href="registration.html">Registration</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <section id="pageForm">
+        <form id="form">
+        <label id="recipientNameLabel" for="recipientName">Recipient Name:</label>
+        <input type="text" id="recipientName" name="recipientName" placeholder="Enter your Recipient Name" />
+        <br>
+        <label id="orgNameLabel" for="organizationName">Organization name:</label>
+        <input type="text" id="orgName" name="organizationName" placeholder="Enter your Organization Name" />
+        <br>
+        <label id="eventDateLabel" for="eventDate">Event Date:</label>
+        <input type="text" id="date" name="eventDate" placeholder="Enter your Event Date" />
+        <br>
+        <label id="urlLabel" for="websiteURL">URL:</label>
+        <input type="text" id="url" name="websiteURL" placeholder="Enter your Website URL" />
+        <br>
+        <label id="hostNameLabel" for="hostName">Host name:</label>
+        <input type="text" id="hostName" name="hostName" placeholder="Host Name" />
+        <br>
+        <input type="submit" id="submit" value="Submit">
+        <br> 
+        
+        </form>
+        </section>
+
+
+    <article id="placeholderContent">
+        Welcome! <span id="recipientNamePlaceholder"></span>
+    
+        <br/> You have been invited to volunteer for an event held on September 1st. Please respond to this email to sign up as a volunteer.
+        
+        <br/> Thanks!
+        
+        <span id="hostNamePlaceholder">Host Capella University</span>
+        <img src="Capella.jpg" style="position: absolute; left: 0px; top: 400px;">
+</body>
+
+</html>
